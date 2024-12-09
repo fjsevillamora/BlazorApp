@@ -1,0 +1,14 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+
+<h3>Todo</h3>
+
+<ul>
+    @foreach (var todo in toDos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
+<input @bind="newToDo">
+<button @onclick="AddToDo">Add To Do's </button>
